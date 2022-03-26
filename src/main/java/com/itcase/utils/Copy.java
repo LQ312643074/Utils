@@ -5,6 +5,8 @@ import org.junit.Test;
 
 import java.io.File;
 
+import static com.itcase.utils.Delect.func;
+
 /**
  * @author 31264
  * @date 2022/3/13 16:43
@@ -32,6 +34,7 @@ public class Copy {
         FileUtil.del(imagePath);
         System.out.println("侧封面加入完成");
     }
+
     /**
      * 批量加入简介
      */
@@ -55,6 +58,18 @@ public class Copy {
         }
         FileUtil.del(docxPath);
         System.out.println("简介加入完成");
+    }
+
+    /**
+     * 批量删除侧封面，文档等
+     */
+    @Test
+    public void delectAll() {
+        String name = "测试";
+        String filename="侧封面.png";
+        //获取其file对象
+        File file = new File("C:\\Users\\31264\\Desktop\\" + name);
+        Delect.func(file,filename);
     }
 }
 
