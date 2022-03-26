@@ -1,7 +1,6 @@
 package com.itcase.utils;
 
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.util.StrUtil;
 import org.junit.Test;
 
 import java.io.File;
@@ -19,12 +18,13 @@ public class Copy {
         String name = "测试";
         File file = new File("C:\\Users\\31264\\Desktop\\" + name);
         String imagePath = file + "\\侧封面.png";
-        file.getAbsoluteFile();
         String[] files = file.list();
         //遍历文件
         for (String string : files) {
             if (!string.contains(".png")) {
-                String newPath = file + "//" + string;
+                String newPath = file + "\\" + string;
+                System.out.println(imagePath);
+                System.out.println(newPath);
                 FileUtil.copyFile(imagePath, newPath);
 
             }
@@ -40,13 +40,15 @@ public class Copy {
         //桌面文件夹名
         String name = "测试";
         File file = new File("C:\\Users\\31264\\Desktop\\" + name);
-        String docxPath = file + "\\简介.docx";
-        file.getAbsoluteFile();
+        String docxPath = file + "\\穆桂英.docx";
         String[] files = file.list();
         //遍历文件
+        assert files != null;
         for (String string : files) {
-            if (!string.contains(".png")) {
-                String newPath = file + "//" + string;
+            if (!string.contains(".docx")) {
+                String newPath = file + "\\" + string;
+                System.out.println(docxPath);
+                System.out.println(newPath);
                 FileUtil.copyFile(docxPath, newPath);
 
             }

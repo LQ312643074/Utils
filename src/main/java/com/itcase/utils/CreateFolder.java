@@ -13,7 +13,7 @@ public class CreateFolder {
     public static void main(String[] args) {
         String name="测试";
         File file = new File("C:\\Users\\31264\\Desktop\\"+name);
-        file.getAbsoluteFile();
+        //file.getAbsoluteFile();
         String[] files = file.list();
         //遍历文件
         for (String string : files) {

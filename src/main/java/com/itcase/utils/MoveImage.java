@@ -15,7 +15,7 @@ import java.io.File;
  */
 public class MoveImage {
     public static void main(String[] args) {
-        String name = "幸运虎lucky tiger";
+        String name = "《爆笑虫子-二十四节气》";
         File file = new File("C:\\Users\\31264\\Desktop\\" + name);
         file.getAbsoluteFile();
         String[] files = file.list();
