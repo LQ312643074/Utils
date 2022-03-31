@@ -1,4 +1,4 @@
-package com.itcase.utils;
+package com.itcase.utils2;
 
 import cn.hutool.core.io.FileUtil;
 
@@ -16,14 +16,15 @@ public class Delect {
      */
     public static void func(File file,String name) {
             File[] fs = file.listFiles();
-            for(File f:fs){
+        assert fs != null;
+        for(File f:fs){
                 //若是目录，则递归打印该目录下的文件
                 if(f.isDirectory()){
 
                     func(f,name);
                 }
-                //若是文件，直接打印
-                if(f.isFile()&& name.equals(f.getName()))		{
+                //若是文件，删除
+                if(f.isFile()&& f.getName().contains(name)){
                     FileUtil.del(f);
                     System.out.println(f +"已删除");
                 }

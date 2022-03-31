@@ -1,4 +1,4 @@
-package com.itcase.utils;
+package com.itcase.utils2;
 
 import cn.hutool.core.io.FileUtil;
 import cn.hutool.core.util.StrUtil;

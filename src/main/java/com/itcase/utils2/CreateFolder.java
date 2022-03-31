@@ -1,4 +1,4 @@
-package com.itcase.utils;
+package com.itcase.utils2;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ import java.io.InputStream;
  */
 public class CreateFolder {
     public static void main(String[] args) {
-        String name="测试";
+        String name="爆笑虫子3";
         File file = new File("C:\\Users\\31264\\Desktop\\"+name);
         //file.getAbsoluteFile();
         String[] files = file.list();
@@ -29,7 +29,6 @@ public class CreateFolder {
     public static void delFile(String filePathAndName) {
         try {
             String filePath = filePathAndName;
-            filePath = filePath.toString();
             java.io.File myDelFile = new java.io.File(filePath);
             myDelFile.delete();
         }
